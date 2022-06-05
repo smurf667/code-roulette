@@ -10,8 +10,8 @@ The application is hosted [here](https://mygroup1698.gitlab.io/code-roulette/).
 
 To build locally, execute
 
-  npm install
-  npm start
+	npm install
+	npm start
 
 The application will be started at http://localhost:3000/
 
