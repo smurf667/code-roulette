@@ -1,0 +1,29 @@
+image: node:16.15.0-buster-slim
+
+stages:
+  - build
+  - deploy
+
+build_app:
+  stage: build
+  script:
+   - npm install --quiet &> out.log
+   - npm run build
+  artifacts:
+    when: always
+    expire_in: 2 hours
+    paths:
+      - build
+      - out.log
+
+pages:
+  stage: deploy
+  image: busybox
+  script:
+   - rm -rf public
+   - mv build public
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
