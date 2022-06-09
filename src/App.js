@@ -32,7 +32,7 @@ function App() {
 
   useEffect(() => {
     loader(baseURL).then(token => {
-      fetch(`${baseURL}/merge_requests?state=opened&per_page=64`, {
+      fetch(`${baseURL}/merge_requests?state=opened&scope=all&per_page=18`, {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${token}`,
