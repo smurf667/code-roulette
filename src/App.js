@@ -4,7 +4,7 @@ import './App.css';
 import logo from './logo.svg';
 import loader from './loader';
 
-// GitLap API base URL
+// GitLab API base URL
 const baseURL = 'https://gitlab.com/api/v4';
 
 // truncate off strings that are too long
